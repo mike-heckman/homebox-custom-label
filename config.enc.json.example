@@ -1,0 +1,5 @@
+{
+  "HOMEBOX_URL": "https://your-homebox.url/",
+  "HOMEBOX_TOKEN": "your-homebox-api-token",
+  "QR_CODE_PREFIX": "http://qr-code.prefix.com/x"
+}
