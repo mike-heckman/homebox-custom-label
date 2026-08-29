@@ -1,4 +1,5 @@
-"""PDF generation module for Homebox custom labels.
+"""
+PDF generation module for Homebox custom labels.
 
 Design Pattern: Factory & Strategy pattern for different label layouts.
 """
@@ -10,7 +11,7 @@ from pathlib import Path
 from typing import Any
 
 import qrcode
-from PIL import Image  # pyright: ignore[reportMissingImports]
+from PIL import Image
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.units import inch
 from reportlab.lib.utils import ImageReader
@@ -20,7 +21,8 @@ logger = logging.getLogger(__name__)
 
 
 def strip_zero_padding(asset_id: str) -> str:
-    """Strips leading zeros from the numeric part of the asset ID.
+    """
+    Strips leading zeros from the numeric part of the asset ID.
 
     Args:
         asset_id: The asset ID to format (e.g., "000-010" or "010").
@@ -36,7 +38,8 @@ def strip_zero_padding(asset_id: str) -> str:
 
 
 def generate_qr_image(payload: str, size_inches: float) -> Image.Image:
-    """Generates a QR code image, scaling error correction by physical size.
+    """
+    Generates a QR code image, scaling error correction by physical size.
 
     Args:
         payload: The URL or text to encode.
@@ -68,7 +71,8 @@ def generate_qr_image(payload: str, size_inches: float) -> Image.Image:
 def generate_pdf(
     items: list[dict[str, Any]], mode: str, qr_prefix: str, output_dir: Path | None = None, offset: int = 0
 ) -> Path:
-    """Generates a PDF of labels for the given items.
+    """
+    Generates a PDF of labels for the given items.
 
     Args:
         items: List of dictionaries containing 'asset_id' and 'name'.
@@ -106,7 +110,8 @@ def generate_pdf(
 
 
 def _render_small_labels(c: canvas.Canvas, items: list[dict[str, Any]], qr_prefix: str, offset: int) -> None:
-    """Renders small labels (OL2050WX). 0.5" x 0.5". Grid 13x17.
+    """
+    Renders small labels (OL2050WX). 0.5" x 0.5". Grid 13x17.
 
     Args:
         c: The canvas.
