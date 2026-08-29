@@ -1,0 +1,27 @@
+[project]
+name = "homebox-custom-label"
+version = "0.1.0"
+description = "Generate PDF labels for Homebox inventory system"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "click>=8.1.7",
+    "qrcode[pil]>=7.4.2",
+    "reportlab>=4.2.0",
+    "requests>=2.32.3",
+]
+
+[project.scripts]
+make-labels = "make_labels:main"
+
+[dependency-groups]
+dev = [
+    "pyright>=1.1.411",
+    "pytest>=9.1.1",
+    "pytest-cov>=7.1.0",
+    "pytest-mock>=3.15.1",
+    "ruff>=0.16.5",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
