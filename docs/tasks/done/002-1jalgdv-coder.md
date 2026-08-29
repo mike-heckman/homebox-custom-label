@@ -14,6 +14,6 @@ The scan mode requires reading items by tag and updating their tags via a read-m
 5. Create `tests/test_homebox_api.py` mocking `requests` and ensuring standard read-modify-write payload logic is solid.
 
 ## Success Criteria
-- [ ] Client can correctly fetch items by tag.
-- [ ] Client can correctly update an item's tags without overwriting other properties.
-- [ ] Unit tests pass with >= 80% coverage.
+- [x] Client can correctly fetch items by tag.
+- [x] Client can correctly update an item's tags without overwriting other properties.
+- [x] Unit tests pass with >= 80% coverage.
