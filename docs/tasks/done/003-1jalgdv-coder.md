@@ -14,6 +14,6 @@ Output PDFs should be written to `./pdf-output/YYYYMMDD-HHMMSS-{mode}.pdf`.
 4. Write tests in `tests/test_pdf_generator.py` testing layout coordinates and calculations.
 
 ## Success Criteria
-- [ ] Reportlab generates PDFs correctly sized for each mode.
-- [ ] Output files are named with the correct timestamp format.
-- [ ] Unit tests pass with >= 80% coverage.
+- [x] Reportlab generates PDFs correctly sized for each mode.
+- [x] Output files are named with the correct timestamp format.
+- [x] Unit tests pass with >= 80% coverage.
